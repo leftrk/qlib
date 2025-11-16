@@ -3,7 +3,7 @@
 
 import warnings
 
-from .base import Model
+from qlib.model.base import Model
 
 
 __all__ = ["Model", "warnings"]

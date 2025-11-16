@@ -8,10 +8,10 @@ import pathlib
 import pandas as pd
 import shutil
 from ruamel.yaml import YAML
-from ...backtest.account import Account
-from .user import User
-from .utils import load_instance, save_instance
-from ...utils import init_instance_by_config
+from qlib.backtest.account import Account
+from qlib.contrib.online.user import User
+from qlib.contrib.online.utils import load_instance, save_instance
+from qlib.utils import init_instance_by_config
 
 
 class UserManager:

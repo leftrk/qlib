@@ -2,12 +2,12 @@
 # Licensed under the MIT License.
 
 import multiprocessing
-import time
 
 import numpy as np
 import pandas as pd
-
+import time
 from torch.utils.data import Dataset, DataLoader
+
 from qlib.rl.utils.data_queue import DataQueue
 
 

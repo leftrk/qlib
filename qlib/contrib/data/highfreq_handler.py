@@ -1,6 +1,6 @@
 from qlib.data.dataset.handler import DataHandler, DataHandlerLP
 
-from .handler import check_transform_proc
+from qlib.contrib.data.handler import check_transform_proc
 
 EPSILON = 1e-4
 

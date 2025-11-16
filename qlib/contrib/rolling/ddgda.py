@@ -18,7 +18,7 @@ from qlib.utils.pickle_utils import restricted_pickle_load
 from qlib.workflow import R
 from qlib.workflow.task.utils import replace_task_handler_with_cache
 
-from .base import Rolling
+from qlib.contrib.rolling.base import Rolling
 
 # LGBM is designed for feature importance & similarity
 LGBM_MODEL = """

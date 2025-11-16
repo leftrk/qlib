@@ -1,17 +1,15 @@
 import copy
 import unittest
+
+import pandas as pd
 import pytest
 
-import fire
-import pandas as pd
-
-import qlib
 from qlib.data import D
 from qlib.model.trainer import task_train
 from qlib.tests import TestAutoData
 from qlib.tests.config import CSI300_GBDT_TASK
-from qlib.workflow.online.utils import OnlineToolR
 from qlib.workflow.online.update import LabelUpdater
+from qlib.workflow.online.utils import OnlineToolR
 
 
 class TestRolling(TestAutoData):

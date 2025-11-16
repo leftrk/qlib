@@ -1,12 +1,12 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-import sys
 from pathlib import Path
 from typing import Tuple
 
 import pandas as pd
 import pytest
+import sys
 
 from qlib.backtest.decision import Order, OrderDir
 from qlib.backtest.executor import SimulatorExecutor

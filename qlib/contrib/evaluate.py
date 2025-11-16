@@ -9,16 +9,15 @@ import pandas as pd
 import warnings
 from typing import Union, Literal
 
-from ..log import get_module_logger
-from ..utils import get_date_range
-from ..utils.resam import Freq
-from ..strategy.base import BaseStrategy
-from ..backtest import get_exchange, position, backtest as backtest_func, executor as _executor
+from qlib.log import get_module_logger
+from qlib.utils import get_date_range
+from qlib.utils.resam import Freq
+from qlib.strategy.base import BaseStrategy
+from qlib.backtest import get_exchange, position, backtest as backtest_func, executor as _executor
 
-
-from ..data import D
-from ..config import C
-from ..data.dataset.utils import get_level_index
+from qlib.data import D
+from qlib.config import C
+from qlib.data.dataset.utils import get_level_index
 
 
 logger = get_module_logger("Evaluate")

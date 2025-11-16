@@ -4,7 +4,7 @@
 import abc
 from typing import List
 
-from .dataset import MetaTaskDataset
+from qlib.model.meta.dataset import MetaTaskDataset
 
 
 class MetaModel(metaclass=abc.ABCMeta):

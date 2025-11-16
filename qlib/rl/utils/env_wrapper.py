@@ -14,8 +14,8 @@ from qlib.rl.interpreter import ActionInterpreter, ObsType, PolicyActType, State
 from qlib.rl.reward import Reward
 from qlib.rl.simulator import ActType, InitialStateType, Simulator, StateType
 from qlib.typehint import TypedDict
-from .finite_env import generate_nan_observation
-from .log import LogCollector, LogLevel
+from qlib.rl.utils.finite_env import generate_nan_observation
+from qlib.rl.utils.log import LogCollector, LogLevel
 
 __all__ = ["InfoDict", "EnvWrapperStatus", "EnvWrapper"]
 

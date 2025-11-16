@@ -8,7 +8,7 @@ import pandas as pd
 import scipy.optimize as so
 from typing import Optional, Union, Callable, List
 
-from .base import BaseOptimizer
+from qlib.contrib.strategy.optimizer.base import BaseOptimizer
 
 
 class PortfolioOptimizer(BaseOptimizer):

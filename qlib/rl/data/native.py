@@ -14,7 +14,7 @@ from qlib.backtest.decision import TradeRange, TradeRangeByTime
 from qlib.constant import EPS_T
 from qlib.utils.pickle_utils import restricted_pickle_load
 
-from .base import BaseIntradayBacktestData, BaseIntradayProcessedData, ProcessedDataProvider
+from qlib.rl.data.base import BaseIntradayBacktestData, BaseIntradayProcessedData, ProcessedDataProvider
 
 
 def get_ticks_slice(

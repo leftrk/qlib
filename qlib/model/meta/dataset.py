@@ -4,7 +4,7 @@
 import abc
 from qlib.model.meta.task import MetaTask
 from typing import Dict, Union, List, Tuple, Text
-from ...utils.serial import Serializable
+from qlib.utils.serial import Serializable
 
 
 class MetaTaskDataset(Serializable, metaclass=abc.ABCMeta):

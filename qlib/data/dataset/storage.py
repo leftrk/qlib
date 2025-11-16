@@ -2,11 +2,11 @@ from abc import abstractmethod
 import pandas as pd
 import numpy as np
 
-from .handler import DataHandler
+from qlib.data.dataset.handler import DataHandler
 from typing import Union, List
 from qlib.log import get_module_logger
 
-from .utils import get_level_index, fetch_df_by_index, fetch_df_by_col
+from qlib.data.dataset.utils import get_level_index, fetch_df_by_index, fetch_df_by_col
 
 
 class BaseHandlerStorage:

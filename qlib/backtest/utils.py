@@ -17,7 +17,7 @@ import warnings
 
 import pandas as pd
 
-from ..data.data import Cal
+from qlib.data.data import Cal
 
 
 class TradeCalendarManager:

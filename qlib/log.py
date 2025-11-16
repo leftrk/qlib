@@ -9,7 +9,7 @@ from logging import config as logging_config
 from time import time
 from contextlib import contextmanager
 
-from .config import C
+from qlib.config import C
 
 
 class MetaLogger(type):
@@ -80,7 +80,7 @@ class _QLibLoggerManager:
         return module_logger
 
 
-get_module_logger = _QLibLoggerManager()
+get_module_logger: _QLibLoggerManager = _QLibLoggerManager()
 
 
 class TimeInspector:

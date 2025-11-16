@@ -14,8 +14,8 @@ from scipy import stats
 from typing import Sequence
 from qlib.typehint import Literal
 
-from ..graph import ScatterGraph, SubplotsGraph, BarGraph, HeatmapGraph
-from ..utils import guess_plotly_rangebreaks
+from qlib.contrib.report.graph import ScatterGraph, SubplotsGraph, BarGraph, HeatmapGraph
+from qlib.contrib.report.utils import guess_plotly_rangebreaks
 
 
 def _group_return(pred_label: pd.DataFrame = None, reverse: bool = False, N: int = 5, **kwargs) -> tuple:

@@ -1,17 +1,17 @@
 # TODO:
 # dump alpha 360 to dataframe and merge it with Alpha158
 
-import sys
 import unittest
-import qlib
 from pathlib import Path
 
+import sys
+
+import qlib
+
 sys.path.append(str(Path(__file__).resolve().parent))
-from qlib.data.dataset.loader import NestedDataLoader, QlibDataLoader
-from qlib.data.dataset.handler import DataHandlerLP
+from qlib.data.dataset.loader import NestedDataLoader
 from qlib.contrib.data.loader import Alpha158DL, Alpha360DL
 from qlib.data.dataset.processor import Fillna
-from qlib.data import D
 
 
 class TestDataLoader(unittest.TestCase):

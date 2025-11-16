@@ -25,14 +25,10 @@ from pathlib import Path
 from typing import List, Union, Optional, Callable
 from packaging import version
 from ruamel.yaml import YAML
-from .file import (
-    get_or_create_path,
-    save_multiple_parts_file,
-    unpack_archive_with_buffer,
-    get_tmp_file_with_buffer,
-)
-from ..config import C
-from ..log import get_module_logger, set_log_with_config
+from qlib.utils.file import get_or_create_path, save_multiple_parts_file, unpack_archive_with_buffer, \
+    get_tmp_file_with_buffer
+from qlib.config import C
+from qlib.log import get_module_logger, set_log_with_config
 
 log = get_module_logger("utils")
 # MultiIndex.is_lexsorted() is a deprecated method in Pandas 1.3.0.
@@ -378,7 +374,7 @@ def is_tradable_date(cur_date):
     date : pandas.Timestamp
         current date
     """
-    from ..data import D  # pylint: disable=C0415
+    from qlib.data import D
 
     return str(cur_date.date()) == str(D.calendar(start_time=cur_date, future=True)[0].date())
 
@@ -395,7 +391,7 @@ def get_date_range(trading_date, left_shift=0, right_shift=0, future=False):
 
     """
 
-    from ..data import D  # pylint: disable=C0415
+    from qlib.data import D
 
     start = get_date_by_shift(trading_date, left_shift, future=future)
     end = get_date_by_shift(trading_date, right_shift, future=future)
@@ -478,7 +474,7 @@ def transform_end_date(end_date=None, freq="day"):
     date : pandas.Timestamp
         current date
     """
-    from ..data import D  # pylint: disable=C0415
+    from qlib.data import D
 
     last_date = D.calendar(freq=freq)[-1]
     if end_date is None or (str(end_date) == "-1") or (pd.Timestamp(last_date) < pd.Timestamp(end_date)):
@@ -936,14 +932,8 @@ def fname_to_code(fname: str):
     return fname
 
 
-from .mod import (
-    get_module_by_module_path,
-    split_module_path,
-    get_callable_kwargs,
-    get_cls_kwargs,
-    init_instance_by_config,
-    class_casting,
-)
+from qlib.utils.mod import get_module_by_module_path, split_module_path, get_callable_kwargs, get_cls_kwargs, \
+    init_instance_by_config, class_casting
 
 __all__ = [
     "get_or_create_path",

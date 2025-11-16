@@ -4,10 +4,8 @@
 # pylint: skip-file
 # flake8: noqa
 
-import random
 import pandas as pd
-from ...data import D
-from ..model.base import Model
+from qlib.model.base import Model
 
 
 class ScoreFileModel(Model):

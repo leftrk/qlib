@@ -7,10 +7,10 @@ import numpy as np
 import pandas as pd
 
 from qlib.utils.data import robust_zscore, zscore
-from ...constant import EPS
-from .utils import fetch_df_by_index
-from ...utils.serial import Serializable
-from ...utils.paral import datetime_groupby_apply
+from qlib.constant import EPS
+from qlib.data.dataset.utils import fetch_df_by_index
+from qlib.utils.serial import Serializable
+from qlib.utils.paral import datetime_groupby_apply
 from qlib.data.inst_processor import InstProcessor
 from qlib.data import D
 
@@ -375,7 +375,7 @@ class HashStockFormat(Processor):
     """Process the storage of from df into hasing stock format"""
 
     def __call__(self, df: pd.DataFrame):
-        from .storage import HashingStockStorage  # pylint: disable=C0415
+        from qlib.data.dataset.storage import HashingStockStorage
 
         return HashingStockStorage.from_df(df)
 

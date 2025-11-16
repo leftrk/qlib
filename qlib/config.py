@@ -109,7 +109,7 @@ class Config:
 
     @staticmethod
     def register_from_C(config, skip_register=True):
-        from .utils import set_log_with_config  # pylint: disable=C0415
+        from qlib.utils import set_log_with_config
 
         if C.registered and skip_register:
             return
@@ -438,7 +438,7 @@ class QlibConfig(Config):
         default_conf : str
             the default config template chosen by user: "server", "client"
         """
-        from .utils import set_log_with_config, get_module_logger, can_use_cache  # pylint: disable=C0415
+        from qlib.utils import set_log_with_config, get_module_logger, can_use_cache
 
         self.reset()
 
@@ -480,11 +480,11 @@ class QlibConfig(Config):
                     )
 
     def register(self):
-        from .utils import init_instance_by_config  # pylint: disable=C0415
-        from .data.ops import register_all_ops  # pylint: disable=C0415
-        from .data.data import register_all_wrappers  # pylint: disable=C0415
-        from .workflow import R, QlibRecorder  # pylint: disable=C0415
-        from .workflow.utils import experiment_exit_handler  # pylint: disable=C0415
+        from qlib.utils import init_instance_by_config
+        from qlib.data.ops import register_all_ops
+        from qlib.data.data import register_all_wrappers
+        from qlib.workflow import R, QlibRecorder
+        from qlib.workflow.utils import experiment_exit_handler
 
         register_all_ops(self)
         register_all_wrappers(self)
@@ -523,4 +523,4 @@ class QlibConfig(Config):
 
 
 # global config
-C = QlibConfig(_default_config)
+C: QlibConfig = QlibConfig(_default_config)

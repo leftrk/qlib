@@ -12,11 +12,11 @@ from qlib.backtest.account import Account
 from qlib.backtest.position import BasePosition
 from qlib.log import get_module_logger
 
-from ..strategy.base import BaseStrategy
-from ..utils import init_instance_by_config
-from .decision import BaseTradeDecision, Order
-from .exchange import Exchange
-from .utils import CommonInfrastructure, LevelInfrastructure, TradeCalendarManager, get_start_end_idx
+from qlib.strategy.base import BaseStrategy
+from qlib.utils import init_instance_by_config
+from qlib.backtest.decision import BaseTradeDecision, Order
+from qlib.backtest.exchange import Exchange
+from qlib.backtest.utils import CommonInfrastructure, LevelInfrastructure, TradeCalendarManager, get_start_end_idx
 
 
 class BaseExecutor:

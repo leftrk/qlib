@@ -5,36 +5,13 @@
 from __future__ import division
 from __future__ import print_function
 
-from .data import (
-    D,
-    CalendarProvider,
-    InstrumentProvider,
-    FeatureProvider,
-    ExpressionProvider,
-    DatasetProvider,
-    LocalCalendarProvider,
-    LocalInstrumentProvider,
-    LocalFeatureProvider,
-    LocalPITProvider,
-    LocalExpressionProvider,
-    LocalDatasetProvider,
-    ClientCalendarProvider,
-    ClientInstrumentProvider,
-    ClientDatasetProvider,
-    BaseProvider,
-    LocalProvider,
-    ClientProvider,
-)
+from qlib.data.data import D, CalendarProvider, InstrumentProvider, FeatureProvider, ExpressionProvider, \
+    DatasetProvider, LocalCalendarProvider, LocalInstrumentProvider, LocalFeatureProvider, LocalPITProvider, \
+    LocalExpressionProvider, LocalDatasetProvider, ClientCalendarProvider, ClientInstrumentProvider, \
+    ClientDatasetProvider, BaseProvider, LocalProvider, ClientProvider
 
-from .cache import (
-    ExpressionCache,
-    DatasetCache,
-    DiskExpressionCache,
-    DiskDatasetCache,
-    SimpleDatasetCache,
-    DatasetURICache,
-    MemoryCalendarCache,
-)
+from qlib.data.cache import ExpressionCache, DatasetCache, DiskExpressionCache, DiskDatasetCache, SimpleDatasetCache, \
+    DatasetURICache, MemoryCalendarCache
 
 
 __all__ = [

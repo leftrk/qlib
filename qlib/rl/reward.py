@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING, Any, Dict, Generic, Optional, Tuple, TypeVar
 from qlib.typehint import final
 
 if TYPE_CHECKING:
-    from .utils.env_wrapper import EnvWrapper
+    from qlib.rl.utils.env_wrapper import EnvWrapper
 
 SimulatorState = TypeVar("SimulatorState")
 

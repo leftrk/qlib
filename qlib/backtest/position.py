@@ -9,8 +9,8 @@ from typing import Any, Dict, List, Union
 import numpy as np
 import pandas as pd
 
-from ..data.data import D
-from .decision import Order
+from qlib.data.data import D
+from qlib.backtest.decision import Order
 
 
 class BasePosition:

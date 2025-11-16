@@ -26,9 +26,9 @@ from pymongo.errors import InvalidDocument
 from qlib import auto_init, get_module_logger
 from tqdm.cli import tqdm
 
-from .utils import get_mongodb
-from ...config import C
-from ...utils.pickle_utils import restricted_pickle_loads
+from qlib.workflow.task.utils import get_mongodb
+from qlib.config import C
+from qlib.utils.pickle_utils import restricted_pickle_loads
 
 
 class TaskManager:

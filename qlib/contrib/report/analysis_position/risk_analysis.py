@@ -7,9 +7,9 @@ import pandas as pd
 
 import plotly.graph_objs as py
 
-from ...evaluate import risk_analysis
+from qlib.contrib.evaluate import risk_analysis
 
-from ..graph import SubplotsGraph, ScatterGraph
+from qlib.contrib.report.graph import SubplotsGraph, ScatterGraph
 
 
 def _get_risk_analysis_data_with_report(

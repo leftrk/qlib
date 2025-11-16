@@ -17,7 +17,7 @@ from qlib.utils.serial import Serializable
 from qlib.utils.exceptions import LoadObjectError
 from qlib.utils.paral import AsyncCaller
 
-from ..log import TimeInspector, get_module_logger
+from qlib.log import TimeInspector, get_module_logger
 from mlflow.store.artifact.azure_blob_artifact_repo import AzureBlobArtifactRepository
 
 logger = get_module_logger("workflow")

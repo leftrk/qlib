@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 from qlib.data.ops import ElemOperator
 from qlib.log import get_module_logger
-from .data import Cal
+from qlib.data.data import Cal
 
 
 class P(ElemOperator):

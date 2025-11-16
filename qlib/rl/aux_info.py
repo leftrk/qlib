@@ -7,10 +7,10 @@ from typing import TYPE_CHECKING, Generic, Optional, TypeVar
 
 from qlib.typehint import final
 
-from .simulator import StateType
+from qlib.rl.simulator import StateType
 
 if TYPE_CHECKING:
-    from .utils.env_wrapper import EnvWrapper
+    from qlib.rl.utils.env_wrapper import EnvWrapper
 
 
 __all__ = ["AuxiliaryInfoCollector"]

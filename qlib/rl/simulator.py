@@ -5,10 +5,10 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, Generic, Optional, TypeVar
 
-from .seed import InitialStateType
+from qlib.rl.seed import InitialStateType
 
 if TYPE_CHECKING:
-    from .utils.env_wrapper import EnvWrapper
+    from qlib.rl.utils.env_wrapper import EnvWrapper
 
 StateType = TypeVar("StateType")
 """StateType stores all the useful data in the simulation process

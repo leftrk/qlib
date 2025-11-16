@@ -11,7 +11,7 @@ from tianshou.data import Batch
 
 from qlib.typehint import Literal
 
-from .interpreter import FullHistoryObs
+from qlib.rl.order_execution.interpreter import FullHistoryObs
 
 __all__ = ["Recurrent"]
 
