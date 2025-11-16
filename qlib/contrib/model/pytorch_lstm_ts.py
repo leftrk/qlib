@@ -8,18 +8,18 @@ from __future__ import print_function
 import numpy as np
 import pandas as pd
 import copy
-from ...utils import get_or_create_path
-from ...log import get_module_logger
+from qlib.utils import get_or_create_path
+from qlib.log import get_module_logger
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 
-from ...model.base import Model
-from ...data.dataset.handler import DataHandlerLP
-from ...model.utils import ConcatDataset
-from ...data.dataset.weight import Reweighter
+from qlib.model.base import Model
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.model.utils import ConcatDataset
+from qlib.data.dataset.weight import Reweighter
 
 
 class LSTM(Model):

@@ -25,14 +25,10 @@ from pathlib import Path
 from typing import List, Union, Optional, Callable
 from packaging import version
 from ruamel.yaml import YAML
-from .file import (
-    get_or_create_path,
-    save_multiple_parts_file,
-    unpack_archive_with_buffer,
-    get_tmp_file_with_buffer,
-)
-from ..config import C
-from ..log import get_module_logger, set_log_with_config
+from qlib.utils.file import get_or_create_path, save_multiple_parts_file, unpack_archive_with_buffer, \
+    get_tmp_file_with_buffer
+from qlib.config import C
+from qlib.log import get_module_logger, set_log_with_config
 
 log = get_module_logger("utils")
 # MultiIndex.is_lexsorted() is a deprecated method in Pandas 1.3.0.

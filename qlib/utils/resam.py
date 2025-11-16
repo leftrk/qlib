@@ -4,9 +4,9 @@ import pandas as pd
 from functools import partial
 from typing import Union, Callable
 
-from . import lazy_sort_index
-from .time import Freq, cal_sam_minute
-from ..config import C
+from qlib.utils import lazy_sort_index
+from qlib.utils.time import Freq, cal_sam_minute
+from qlib.config import C
 
 
 def resam_calendar(

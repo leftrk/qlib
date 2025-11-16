@@ -3,8 +3,8 @@
 
 import pandas as pd
 
-from ..graph import ScatterGraph
-from ..utils import guess_plotly_rangebreaks
+from qlib.contrib.report.graph import ScatterGraph
+from qlib.contrib.report.utils import guess_plotly_rangebreaks
 
 
 def _get_score_ic(pred_label: pd.DataFrame):

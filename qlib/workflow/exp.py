@@ -6,8 +6,8 @@ from qlib.typehint import Literal
 import mlflow
 from mlflow.entities import ViewType
 from mlflow.exceptions import MlflowException
-from .recorder import Recorder, MLflowRecorder
-from ..log import get_module_logger
+from qlib.workflow.recorder import Recorder, MLflowRecorder
+from qlib.log import get_module_logger
 
 logger = get_module_logger("workflow")
 

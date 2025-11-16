@@ -1,10 +1,10 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-from .data_queue import DataQueue
-from .env_wrapper import EnvWrapper, EnvWrapperStatus
-from .finite_env import FiniteEnvType, vectorize_env
-from .log import ConsoleWriter, CsvWriter, LogBuffer, LogCollector, LogLevel, LogWriter
+from qlib.rl.utils.data_queue import DataQueue
+from qlib.rl.utils.env_wrapper import EnvWrapper, EnvWrapperStatus
+from qlib.rl.utils.finite_env import FiniteEnvType, vectorize_env
+from qlib.rl.utils.log import ConsoleWriter, CsvWriter, LogBuffer, LogCollector, LogLevel, LogWriter
 
 __all__ = [
     "LogLevel",

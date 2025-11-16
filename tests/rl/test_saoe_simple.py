@@ -1,7 +1,6 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-import sys
 from functools import partial
 from pathlib import Path
 from typing import NamedTuple
@@ -9,6 +8,7 @@ from typing import NamedTuple
 import numpy as np
 import pandas as pd
 import pytest
+import sys
 import torch
 from tianshou.data import Batch
 

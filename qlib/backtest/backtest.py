@@ -16,7 +16,7 @@ if TYPE_CHECKING:
 
 from tqdm.auto import tqdm
 
-from ..utils.time import Freq
+from qlib.utils.time import Freq
 
 
 PORT_METRIC = Dict[str, Tuple[pd.DataFrame, dict]]

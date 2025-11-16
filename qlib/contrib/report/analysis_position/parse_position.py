@@ -3,8 +3,7 @@
 
 import pandas as pd
 
-
-from ....backtest.profit_attribution import get_stock_weight_df
+from qlib.backtest.profit_attribution import get_stock_weight_df
 
 
 def parse_position(position: dict = None) -> pd.DataFrame:

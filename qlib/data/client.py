@@ -10,7 +10,7 @@ import socketio
 
 import qlib
 
-from ..log import get_module_logger
+from qlib.log import get_module_logger
 
 
 class Client:

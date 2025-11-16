@@ -20,21 +20,13 @@ import pandas as pd
 from typing import Union, Iterable
 from collections import OrderedDict
 
-from ..config import C
-from ..utils import (
-    hash_args,
-    get_redis_connection,
-    read_bin,
-    parse_field,
-    remove_fields_space,
-    normalize_cache_fields,
-    normalize_cache_instruments,
-)
-from ..utils.pickle_utils import restricted_pickle_load
+from qlib.config import C
+from qlib.utils import hash_args, get_redis_connection, read_bin, parse_field, remove_fields_space, \
+    normalize_cache_fields, normalize_cache_instruments
+from qlib.utils.pickle_utils import restricted_pickle_load
 
-from ..log import get_module_logger
-from .base import Feature
-from .ops import Operators  # pylint: disable=W0611  # noqa: F401
+from qlib.log import get_module_logger
+from qlib.data.base import Feature
 
 
 class QlibCacheException(RuntimeError):

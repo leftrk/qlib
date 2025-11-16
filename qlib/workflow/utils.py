@@ -6,9 +6,9 @@ import logging
 import sys
 import traceback
 
-from ..log import get_module_logger
-from . import R
-from .recorder import Recorder
+from qlib.log import get_module_logger
+from qlib.workflow import R
+from qlib.workflow.recorder import Recorder
 
 logger = get_module_logger("workflow", logging.INFO)
 

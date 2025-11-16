@@ -9,7 +9,7 @@ import pandas as pd
 from typing import Dict, List, Union, Callable
 
 from qlib.utils import transform_end_date
-from .utils import TimeAdjuster
+from qlib.workflow.task.utils import TimeAdjuster
 
 
 def task_generator(tasks, generators) -> list:

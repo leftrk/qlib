@@ -16,11 +16,11 @@ To be honest, design always add burdens. For example,
 
 from contextlib import contextmanager
 from typing import Text, Optional, Any, Dict
-from .expm import ExpManager
-from .exp import Experiment
-from .recorder import Recorder
-from ..utils import Wrapper
-from ..utils.exceptions import RecorderInitializationError
+from qlib.workflow.expm import ExpManager
+from qlib.workflow.exp import Experiment
+from qlib.workflow.recorder import Recorder
+from qlib.utils import Wrapper
+from qlib.utils.exceptions import RecorderInitializationError
 
 
 class QlibRecorder:

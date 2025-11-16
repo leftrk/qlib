@@ -14,9 +14,9 @@ import qlib.utils.index_data as idd
 from qlib.backtest.decision import BaseTradeDecision, Order, OrderDir
 from qlib.backtest.exchange import Exchange
 
-from ..tests.config import CSI300_BENCH
-from ..utils.resam import get_higher_eq_freq_feature, resam_ts_data
-from .high_performance_ds import BaseOrderIndicator, BaseSingleMetric, NumpyOrderIndicator
+from qlib.tests.config import CSI300_BENCH
+from qlib.utils.resam import get_higher_eq_freq_feature, resam_ts_data
+from qlib.backtest.high_performance_ds import BaseOrderIndicator, BaseSingleMetric, NumpyOrderIndicator
 
 
 class PortfolioMetrics:

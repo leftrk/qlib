@@ -10,9 +10,9 @@ import pandas as pd
 
 from typing import Union, List, Type
 from scipy.stats import percentileofscore
-from .base import Expression, ExpressionOps, Feature, PFeature
-from ..log import get_module_logger
-from ..utils import get_callable_kwargs
+from qlib.data.base import Expression, ExpressionOps, Feature, PFeature
+from qlib.log import get_module_logger
+from qlib.utils import get_callable_kwargs
 
 try:
     from ._libs.rolling import rolling_slope, rolling_rsquare, rolling_resi
@@ -1664,7 +1664,7 @@ class OpsWrapper:
         return self._ops[key]
 
 
-Operators = OpsWrapper()
+Operators: OpsWrapper = OpsWrapper()
 
 
 def register_all_ops(C):

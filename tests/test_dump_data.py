@@ -2,14 +2,15 @@
 #  Licensed under the MIT License.
 
 
-import sys
 import shutil
 import unittest
 from pathlib import Path
 
-import qlib
 import numpy as np
 import pandas as pd
+import sys
+
+import qlib
 from qlib.data import D
 
 sys.path.append(str(Path(__file__).resolve().parent.parent.joinpath("scripts")))

@@ -29,7 +29,7 @@ import pandas as pd
 from qlib.log import get_module_logger
 
 if TYPE_CHECKING:
-    from .env_wrapper import InfoDict
+    from qlib.rl.utils.env_wrapper import InfoDict
 
 
 __all__ = ["LogCollector", "LogWriter", "LogLevel", "LogBuffer", "ConsoleWriter", "CsvWriter"]

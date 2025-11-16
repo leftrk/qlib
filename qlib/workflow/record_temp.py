@@ -10,17 +10,17 @@ from pprint import pprint
 from typing import Union, List, Optional, Dict
 
 from qlib.utils.exceptions import LoadObjectError
-from ..contrib.evaluate import risk_analysis, indicator_analysis
+from qlib.contrib.evaluate import risk_analysis, indicator_analysis
 
-from ..data.dataset import DatasetH
-from ..data.dataset.handler import DataHandlerLP
-from ..backtest import backtest as normal_backtest
-from ..log import get_module_logger
-from ..utils import fill_placeholder, flatten_dict, class_casting, get_date_by_shift
-from ..utils.time import Freq
-from ..utils.data import deepcopy_basic_type
-from ..utils.exceptions import QlibException
-from ..contrib.eva.alpha import calc_ic, calc_long_short_return, calc_long_short_prec
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.backtest import backtest as normal_backtest
+from qlib.log import get_module_logger
+from qlib.utils import fill_placeholder, flatten_dict, class_casting, get_date_by_shift
+from qlib.utils.time import Freq
+from qlib.utils.data import deepcopy_basic_type
+from qlib.utils.exceptions import QlibException
+from qlib.contrib.eva.alpha import calc_ic, calc_long_short_return, calc_long_short_prec
 
 
 logger = get_module_logger("workflow", logging.INFO)

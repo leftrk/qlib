@@ -14,12 +14,12 @@ import torch.optim as optim
 
 from qlib.workflow import R
 
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
-from ...log import get_module_logger
-from ...model.base import Model
-from ...utils import get_or_create_path
-from .pytorch_utils import count_parameters
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.log import get_module_logger
+from qlib.model.base import Model
+from qlib.utils import get_or_create_path
+from qlib.contrib.model.pytorch_utils import count_parameters
 
 
 class GRU(Model):

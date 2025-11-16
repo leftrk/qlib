@@ -14,10 +14,10 @@ import pandas as pd
 
 import qlib.utils.index_data as idd
 
-from ..log import get_module_logger
-from ..utils.index_data import IndexData, SingleData
-from ..utils.resam import resam_ts_data, ts_data_last
-from ..utils.time import Freq, is_single_value
+from qlib.log import get_module_logger
+from qlib.utils.index_data import IndexData, SingleData
+from qlib.utils.resam import resam_ts_data, ts_data_last
+from qlib.utils.time import Freq, is_single_value
 
 
 class BaseQuote:

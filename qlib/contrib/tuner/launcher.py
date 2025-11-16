@@ -8,8 +8,6 @@
 
 import argparse
 import importlib
-import os
-import yaml
 
 from .config import TunerConfigManager
 

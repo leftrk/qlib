@@ -523,4 +523,4 @@ class QlibConfig(Config):
 
 
 # global config
-C = QlibConfig(_default_config)
+C: QlibConfig = QlibConfig(_default_config)

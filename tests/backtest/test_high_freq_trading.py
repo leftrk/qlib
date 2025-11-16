@@ -1,11 +1,10 @@
-from typing import List, Tuple, Union
-from qlib.backtest.position import Position
-from qlib.backtest import collect_data, format_decisions
-from qlib.backtest.decision import BaseTradeDecision, TradeRangeByTime
-import qlib
-from qlib.tests import TestAutoData
 import unittest
+
 import pandas as pd
+
+from qlib.backtest import collect_data, format_decisions
+from qlib.backtest.decision import TradeRangeByTime
+from qlib.tests import TestAutoData
 
 
 @unittest.skip("This test takes a lot of time due to the large size of high-frequency data")

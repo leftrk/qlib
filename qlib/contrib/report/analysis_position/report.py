@@ -3,7 +3,7 @@
 
 import pandas as pd
 
-from ..graph import SubplotsGraph, BaseGraph
+from qlib.contrib.report.graph import SubplotsGraph, BaseGraph
 
 
 def _calculate_maximum(df: pd.DataFrame, is_ex: bool = False):

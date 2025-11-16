@@ -9,17 +9,17 @@ import numpy as np
 import pandas as pd
 import copy
 import math
-from ...utils import get_or_create_path
-from ...log import get_module_logger
+from qlib.utils import get_or_create_path
+from qlib.log import get_module_logger
 
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 
-from ...model.base import Model
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
+from qlib.model.base import Model
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
 
 
 class TransformerModel(Model):

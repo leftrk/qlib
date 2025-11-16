@@ -10,15 +10,15 @@ import pathlib
 import qlib
 import logging
 
-from ...data import D
-from ...log import get_module_logger
-from ...utils import get_pre_trading_date, is_tradable_date
-from ..evaluate import risk_analysis
+from qlib.data import D
+from qlib.log import get_module_logger
+from qlib.utils import get_pre_trading_date, is_tradable_date
+from qlib.contrib.evaluate import risk_analysis
 from ..backtest.backtest import update_account
 
-from .manager import UserManager
-from .utils import prepare
-from .utils import create_user_folder
+from qlib.contrib.online.manager import UserManager
+from qlib.contrib.online.utils import prepare
+from qlib.contrib.online.utils import create_user_folder
 from .executor import load_order_list, save_order_list
 from .executor import SimulatorExecutor
 from .executor import save_score_series, load_score_series

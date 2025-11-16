@@ -5,7 +5,7 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Type, Union, cast
 
-from ..utils.index_data import IndexData
+from qlib.utils.index_data import IndexData
 
 if TYPE_CHECKING:
     from .account import Account
@@ -17,12 +17,12 @@ import pandas as pd
 
 from qlib.backtest.position import BasePosition
 
-from ..config import C
-from ..constant import REG_CN, REG_TW
-from ..data.data import D
-from ..log import get_module_logger
-from .decision import Order, OrderDir, OrderHelper
-from .high_performance_ds import BaseQuote, NumpyQuote
+from qlib.config import C
+from qlib.constant import REG_CN, REG_TW
+from qlib.data.data import D
+from qlib.log import get_module_logger
+from qlib.backtest.decision import Order, OrderDir, OrderHelper
+from qlib.backtest.high_performance_ds import BaseQuote, NumpyQuote
 
 
 class Exchange:
@@ -54,10 +54,10 @@ class Exchange:
         **kwargs: Any,
     ) -> None:
         """__init__
-        :param freq:             frequency of data
-        :param start_time:       closed start time for backtest
-        :param end_time:         closed end time for backtest
-        :param codes:            list stock_id list or a string of instruments(i.e. all, csi500, sse50)
+        :param freq:            frequency of data
+        :param start_time:      closed start time for backtest
+        :param end_time:        closed end time for backtest
+        :param codes:           list stock_id list or a string of instruments(i.e. all, csi500, sse50)
         :param deal_price:      Union[str, Tuple[str, str], List[str]]
                                 The `deal_price` supports following two types of input
                                 - <deal_price> : str
@@ -104,13 +104,13 @@ class Exchange:
                                             "buy": ("current", "$askV1"),
                                             "sell": ("current", "$bidV1"),
                                         }
-        :param open_cost:        cost rate for open, default 0.0015
-        :param close_cost:       cost rate for close, default 0.0025
-        :param trade_unit:       trade unit, 100 for China A market.
-                                 None for disable trade unit.
-                                 **NOTE**: `trade_unit` is included in the `kwargs`. It is necessary because we must
-                                 distinguish `not set` and `disable trade_unit`
-        :param min_cost:         min cost, default 5
+        :param open_cost:       cost rate for open, default 0.0015
+        :param close_cost:      cost rate for close, default 0.0025
+        :param trade_unit:      trade unit, 100 for China A market.
+                                None for disable trade unit.
+                                **NOTE**: `trade_unit` is included in the `kwargs`. It is necessary because we must
+                                distinguish `not set` and `disable trade_unit`
+        :param min_cost:        min cost, default 5
         :param impact_cost:     market impact cost rate (a.k.a. slippage). A recommended value is 0.1.
         :param extra_quote:     pandas, dataframe consists of
                                     columns: like ['$vwap', '$close', '$volume', '$factor', 'limit_sell', 'limit_buy'].
@@ -172,7 +172,7 @@ class Exchange:
         # $factor is for rounding to the trading unit
         # $change is for calculating the limit of the stock
 
-        # 　get volume limit from kwargs
+        # get volume limit from kwargs
         self.buy_vol_limit, self.sell_vol_limit, vol_lt_fields = self._get_vol_limit(volume_threshold)
 
         necessary_fields = {self.buy_price, self.sell_price, "$close", "$change", "$factor", "$volume"}

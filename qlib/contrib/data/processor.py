@@ -1,7 +1,7 @@
 import numpy as np
 
-from ...log import TimeInspector
-from ...data.dataset.processor import Processor, get_group_columns
+from qlib.log import TimeInspector
+from qlib.data.dataset.processor import Processor, get_group_columns
 
 
 class ConfigSectionProcessor(Processor):

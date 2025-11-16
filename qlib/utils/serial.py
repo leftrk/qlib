@@ -5,7 +5,7 @@ import pickle
 import dill
 from pathlib import Path
 from typing import Union
-from ..config import C
+from qlib.config import C
 
 
 class Serializable:

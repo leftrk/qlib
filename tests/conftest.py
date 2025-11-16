@@ -1,4 +1,5 @@
 import os
+
 import sys
 
 """Ignore RL tests on non-linux platform."""

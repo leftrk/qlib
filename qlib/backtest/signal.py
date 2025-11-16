@@ -7,16 +7,16 @@ import pandas as pd
 
 from qlib.utils import init_instance_by_config
 
-from ..data.dataset import Dataset
-from ..data.dataset.utils import convert_index_format
-from ..model.base import BaseModel
-from ..utils.resam import resam_ts_data
+from qlib.data.dataset import Dataset
+from qlib.data.dataset.utils import convert_index_format
+from qlib.model.base import BaseModel
+from qlib.utils.resam import resam_ts_data
 
 
 class Signal(metaclass=abc.ABCMeta):
     """
     Some trading strategy make decisions based on other prediction signals
-    The signals may comes from different sources(e.g. prepared data, online prediction from model and dataset)
+    The signals may come from different sources(e.g. prepared data, online prediction from model and dataset)
 
     This interface is tries to provide unified interface for those different sources
     """

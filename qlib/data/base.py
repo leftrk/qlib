@@ -7,7 +7,7 @@ from __future__ import print_function
 
 import abc
 import pandas as pd
-from ..log import get_module_logger
+from qlib.log import get_module_logger
 
 
 class Expression(abc.ABC):

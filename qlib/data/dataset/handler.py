@@ -9,15 +9,15 @@ from typing import Callable, Union, Tuple, List, Iterator, Optional
 import pandas as pd
 
 from qlib.typehint import Literal
-from ...log import get_module_logger, TimeInspector
-from ...utils import init_instance_by_config
-from ...utils.serial import Serializable
-from .utils import fetch_df_by_index, fetch_df_by_col
-from ...utils import lazy_sort_index
-from .loader import DataLoader
+from qlib.log import get_module_logger, TimeInspector
+from qlib.utils import init_instance_by_config
+from qlib.utils.serial import Serializable
+from qlib.data.dataset.utils import fetch_df_by_index, fetch_df_by_col
+from qlib.utils import lazy_sort_index
+from qlib.data.dataset.loader import DataLoader
 
-from . import processor as processor_module
-from . import loader as data_loader_module
+from qlib.data.dataset import processor as processor_module
+from qlib.data.dataset import loader as data_loader_module
 
 
 DATA_KEY_TYPE = Literal["raw", "infer", "learn"]

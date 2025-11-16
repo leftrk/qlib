@@ -9,20 +9,20 @@ from typing import TYPE_CHECKING, Any, Generator, List, Optional, Tuple, Union
 
 import pandas as pd
 
-from .account import Account
+from qlib.backtest.account import Account
 
 if TYPE_CHECKING:
-    from ..strategy.base import BaseStrategy
-    from .executor import BaseExecutor
-    from .decision import BaseTradeDecision
+    from qlib.strategy.base import BaseStrategy
+    from qlib.backtest.executor import BaseExecutor
+    from qlib.backtest.decision import BaseTradeDecision
 
-from ..config import C
-from ..log import get_module_logger
-from ..utils import init_instance_by_config
-from .backtest import INDICATOR_METRIC, PORT_METRIC, backtest_loop, collect_data_loop
-from .decision import Order
-from .exchange import Exchange
-from .utils import CommonInfrastructure
+from qlib.config import C
+from qlib.log import get_module_logger
+from qlib.utils import init_instance_by_config
+from qlib.backtest.backtest import INDICATOR_METRIC, PORT_METRIC, backtest_loop, collect_data_loop
+from qlib.backtest.decision import Order
+from qlib.backtest.exchange import Exchange
+from qlib.backtest.utils import CommonInfrastructure
 
 # make import more user-friendly by adding `from qlib.backtest import STH`
 

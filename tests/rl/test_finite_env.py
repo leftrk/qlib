@@ -8,6 +8,7 @@ import numpy as np
 from tianshou.data import Batch, Collector
 from tianshou.policy import BasePolicy
 from torch.utils.data import DataLoader, Dataset, DistributedSampler
+
 from qlib.rl.utils.finite_env import (
     LogWriter,
     FiniteDummyVectorEnv,
@@ -16,7 +17,6 @@ from qlib.rl.utils.finite_env import (
     check_nan_observation,
     generate_nan_observation,
 )
-
 
 _test_space = gym.spaces.Dict(
     {

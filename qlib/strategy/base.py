@@ -12,10 +12,10 @@ if TYPE_CHECKING:
 
 from typing import Tuple
 
-from ..backtest.decision import BaseTradeDecision
-from ..backtest.utils import CommonInfrastructure, LevelInfrastructure, TradeCalendarManager
-from ..rl.interpreter import ActionInterpreter, StateInterpreter
-from ..utils import init_instance_by_config
+from qlib.backtest.decision import BaseTradeDecision
+from qlib.backtest.utils import CommonInfrastructure, LevelInfrastructure, TradeCalendarManager
+from qlib.rl.interpreter import ActionInterpreter, StateInterpreter
+from qlib.utils import init_instance_by_config
 
 __all__ = ["BaseStrategy", "RLStrategy", "RLIntStrategy"]
 

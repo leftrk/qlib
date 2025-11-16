@@ -17,27 +17,15 @@ from typing import List, Union, Optional
 # For supporting multiprocessing in outer code, joblib is used
 from joblib import delayed
 
-from .cache import H
-from ..config import C
-from .inst_processor import InstProcessor
+from qlib.data.cache import H
+from qlib.config import C
+from qlib.data.inst_processor import InstProcessor
 
-from ..log import get_module_logger
-from .cache import DiskDatasetCache
-from ..utils import (
-    Wrapper,
-    init_instance_by_config,
-    register_wrapper,
-    get_module_by_module_path,
-    parse_field,
-    hash_args,
-    normalize_cache_fields,
-    code_to_fname,
-    time_to_slc_point,
-    read_period_data,
-    get_period_list,
-)
-from ..utils.paral import ParallelExt
-from .ops import Operators  # pylint: disable=W0611  # noqa: F401
+from qlib.log import get_module_logger
+from qlib.data.cache import DiskDatasetCache
+from qlib.utils import Wrapper, init_instance_by_config, register_wrapper, get_module_by_module_path, parse_field, \
+    hash_args, normalize_cache_fields, code_to_fname, time_to_slc_point, read_period_data, get_period_list
+from qlib.utils.paral import ParallelExt
 
 
 class ProviderBackendMixin:

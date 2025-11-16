@@ -17,14 +17,11 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 from qlib.data.dataset.weight import Reweighter
 
-from .pytorch_utils import count_parameters
-from ...model.base import Model
-from ...data.dataset import DatasetH, TSDatasetH
-from ...data.dataset.handler import DataHandlerLP
-from ...utils import (
-    init_instance_by_config,
-    get_or_create_path,
-)
+from qlib.contrib.model.pytorch_utils import count_parameters
+from qlib.model.base import Model
+from qlib.data.dataset import DatasetH, TSDatasetH
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.utils import init_instance_by_config, get_or_create_path
 from ...log import get_module_logger
 
 from ...model.utils import ConcatDataset

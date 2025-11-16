@@ -5,11 +5,11 @@ import lightgbm as lgb
 import numpy as np
 import pandas as pd
 from typing import Text, Union
-from ...model.base import Model
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
-from ...model.interpret.base import FeatureInt
-from ...log import get_module_logger
+from qlib.model.base import Model
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.model.interpret.base import FeatureInt
+from qlib.log import get_module_logger
 
 
 class DEnsembleModel(Model, FeatureInt):
