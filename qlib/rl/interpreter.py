@@ -10,7 +10,7 @@ import numpy as np
 from gym import spaces
 
 from qlib.typehint import final
-from .simulator import ActType, StateType
+from qlib.rl.simulator import ActType, StateType
 
 ObsType = TypeVar("ObsType")
 PolicyActType = TypeVar("PolicyActType")

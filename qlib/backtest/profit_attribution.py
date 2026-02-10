@@ -10,9 +10,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from ..config import C
-from ..data import D
-from .position import Position
+from qlib.config import C
+from qlib.data import D
+from qlib.backtest.position import Position
 
 
 def get_benchmark_weight(

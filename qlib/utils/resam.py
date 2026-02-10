@@ -4,9 +4,9 @@ import pandas as pd
 from functools import partial
 from typing import Union, Callable
 
-from . import lazy_sort_index
-from .time import Freq, cal_sam_minute
-from ..config import C
+from qlib.utils import lazy_sort_index
+from qlib.utils.time import Freq, cal_sam_minute
+from qlib.config import C
 
 
 def resam_calendar(
@@ -77,7 +77,7 @@ def get_higher_eq_freq_feature(instruments, fields, start_time=None, end_time=No
         the feature with higher or equal frequency
     """
 
-    from ..data.data import D  # pylint: disable=C0415
+    from qlib.data.data import D
 
     try:
         _result = D.features(instruments, fields, start_time, end_time, freq=freq, disk_cache=disk_cache)
@@ -179,7 +179,7 @@ def resam_ts_data(
 
     selector_datetime = slice(start_time, end_time)
 
-    from ..data.dataset.utils import get_level_index  # pylint: disable=C0415
+    from qlib.data.dataset.utils import get_level_index
 
     feature = lazy_sort_index(ts_feature)
 

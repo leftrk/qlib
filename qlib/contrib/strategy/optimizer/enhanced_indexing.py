@@ -7,7 +7,7 @@ import cvxpy as cp
 from typing import Union, Optional, Dict, Any, List
 
 from qlib.log import get_module_logger
-from .base import BaseOptimizer
+from qlib.contrib.strategy.optimizer.base import BaseOptimizer
 
 
 logger = get_module_logger("EnhancedIndexingOptimizer")

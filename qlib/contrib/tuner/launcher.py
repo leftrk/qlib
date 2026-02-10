@@ -8,10 +8,8 @@
 
 import argparse
 import importlib
-import os
-import yaml
 
-from .config import TunerConfigManager
+from qlib.contrib.tuner.config import TunerConfigManager
 
 
 args_parser = argparse.ArgumentParser(prog="tuner")

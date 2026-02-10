@@ -2,10 +2,10 @@
 # Licensed under the MIT License.
 
 from qlib.contrib.data.loader import Alpha158DL, Alpha360DL
-from ...data.dataset.handler import DataHandlerLP
-from ...data.dataset.processor import Processor
-from ...utils import get_callable_kwargs
-from ...data.dataset import processor as processor_module
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.data.dataset.processor import Processor
+from qlib.utils import get_callable_kwargs
+from qlib.data.dataset import processor as processor_module
 from inspect import getfullargspec
 
 

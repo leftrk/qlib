@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 import abc
 
-from .data import Cal, DatasetD
+from qlib.data.data import Cal, DatasetD
 
 
 class BaseDFilter(abc.ABC):

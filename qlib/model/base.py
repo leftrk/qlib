@@ -2,9 +2,9 @@
 # Licensed under the MIT License.
 import abc
 from typing import Text, Union
-from ..utils.serial import Serializable
-from ..data.dataset import Dataset
-from ..data.dataset.weight import Reweighter
+from qlib.utils.serial import Serializable
+from qlib.data.dataset import Dataset
+from qlib.data.dataset.weight import Reweighter
 
 
 class BaseModel(Serializable, metaclass=abc.ABCMeta):

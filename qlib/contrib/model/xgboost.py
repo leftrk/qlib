@@ -5,11 +5,11 @@ import numpy as np
 import pandas as pd
 import xgboost as xgb
 from typing import Text, Union
-from ...model.base import Model
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
-from ...model.interpret.base import FeatureInt
-from ...data.dataset.weight import Reweighter
+from qlib.model.base import Model
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.model.interpret.base import FeatureInt
+from qlib.data.dataset.weight import Reweighter
 
 
 class XGBModel(Model, FeatureInt):

@@ -19,7 +19,7 @@ from tianshou.env import BaseVectorEnv, DummyVectorEnv, ShmemVectorEnv, SubprocV
 
 from qlib.typehint import Literal
 
-from .log import LogWriter
+from qlib.rl.utils.log import LogWriter
 
 __all__ = [
     "generate_nan_observation",

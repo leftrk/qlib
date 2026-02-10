@@ -1,11 +1,12 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
-import unittest
 import platform
+import shutil
+import unittest
+from pathlib import Path
+
 import mlflow
 import time
-from pathlib import Path
-import shutil
 
 
 class MLflowTest(unittest.TestCase):

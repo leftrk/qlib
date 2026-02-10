@@ -1,8 +1,8 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-from .order_generator import OrderGenWInteract
-from .signal_strategy import WeightStrategyBase
+from qlib.contrib.strategy.order_generator import OrderGenWInteract
+from qlib.contrib.strategy.signal_strategy import WeightStrategyBase
 
 
 class SoftTopkStrategy(WeightStrategyBase):

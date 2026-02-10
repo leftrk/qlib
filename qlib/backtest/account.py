@@ -9,11 +9,11 @@ import pandas as pd
 
 from qlib.utils import init_instance_by_config
 
-from .decision import BaseTradeDecision, Order
-from .exchange import Exchange
-from .high_performance_ds import BaseOrderIndicator
-from .position import BasePosition
-from .report import Indicator, PortfolioMetrics
+from qlib.backtest.decision import BaseTradeDecision, Order
+from qlib.backtest.exchange import Exchange
+from qlib.backtest.high_performance_ds import BaseOrderIndicator
+from qlib.backtest.position import BasePosition
+from qlib.backtest.report import Indicator, PortfolioMetrics
 
 """
 rtn & earning in the Account

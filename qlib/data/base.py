@@ -7,7 +7,7 @@ from __future__ import print_function
 
 import abc
 import pandas as pd
-from ..log import get_module_logger
+from qlib.log import get_module_logger
 
 
 class Expression(abc.ABC):
@@ -30,112 +30,112 @@ class Expression(abc.ABC):
         return str(self)
 
     def __gt__(self, other):
-        from .ops import Gt  # pylint: disable=C0415
+        from qlib.data.ops import Gt
 
         return Gt(self, other)
 
     def __ge__(self, other):
-        from .ops import Ge  # pylint: disable=C0415
+        from qlib.data.ops import Ge
 
         return Ge(self, other)
 
     def __lt__(self, other):
-        from .ops import Lt  # pylint: disable=C0415
+        from qlib.data.ops import Lt
 
         return Lt(self, other)
 
     def __le__(self, other):
-        from .ops import Le  # pylint: disable=C0415
+        from qlib.data.ops import Le
 
         return Le(self, other)
 
     def __eq__(self, other):
-        from .ops import Eq  # pylint: disable=C0415
+        from qlib.data.ops import Eq
 
         return Eq(self, other)
 
     def __ne__(self, other):
-        from .ops import Ne  # pylint: disable=C0415
+        from qlib.data.ops import Ne
 
         return Ne(self, other)
 
     def __add__(self, other):
-        from .ops import Add  # pylint: disable=C0415
+        from qlib.data.ops import Add
 
         return Add(self, other)
 
     def __radd__(self, other):
-        from .ops import Add  # pylint: disable=C0415
+        from qlib.data.ops import Add
 
         return Add(other, self)
 
     def __sub__(self, other):
-        from .ops import Sub  # pylint: disable=C0415
+        from qlib.data.ops import Sub
 
         return Sub(self, other)
 
     def __rsub__(self, other):
-        from .ops import Sub  # pylint: disable=C0415
+        from qlib.data.ops import Sub
 
         return Sub(other, self)
 
     def __mul__(self, other):
-        from .ops import Mul  # pylint: disable=C0415
+        from qlib.data.ops import Mul
 
         return Mul(self, other)
 
     def __rmul__(self, other):
-        from .ops import Mul  # pylint: disable=C0415
+        from qlib.data.ops import Mul
 
         return Mul(self, other)
 
     def __div__(self, other):
-        from .ops import Div  # pylint: disable=C0415
+        from qlib.data.ops import Div
 
         return Div(self, other)
 
     def __rdiv__(self, other):
-        from .ops import Div  # pylint: disable=C0415
+        from qlib.data.ops import Div
 
         return Div(other, self)
 
     def __truediv__(self, other):
-        from .ops import Div  # pylint: disable=C0415
+        from qlib.data.ops import Div
 
         return Div(self, other)
 
     def __rtruediv__(self, other):
-        from .ops import Div  # pylint: disable=C0415
+        from qlib.data.ops import Div
 
         return Div(other, self)
 
     def __pow__(self, other):
-        from .ops import Power  # pylint: disable=C0415
+        from qlib.data.ops import Power
 
         return Power(self, other)
 
     def __rpow__(self, other):
-        from .ops import Power  # pylint: disable=C0415
+        from qlib.data.ops import Power
 
         return Power(other, self)
 
     def __and__(self, other):
-        from .ops import And  # pylint: disable=C0415
+        from qlib.data.ops import And
 
         return And(self, other)
 
     def __rand__(self, other):
-        from .ops import And  # pylint: disable=C0415
+        from qlib.data.ops import And
 
         return And(other, self)
 
     def __or__(self, other):
-        from .ops import Or  # pylint: disable=C0415
+        from qlib.data.ops import Or
 
         return Or(self, other)
 
     def __ror__(self, other):
-        from .ops import Or  # pylint: disable=C0415
+        from qlib.data.ops import Or
 
         return Or(other, self)
 
@@ -181,7 +181,7 @@ class Expression(abc.ABC):
         pd.Series
             feature series: The index of the series is the calendar index
         """
-        from .cache import H  # pylint: disable=C0415
+        from qlib.data.cache import H
 
         # cache
         cache_key = str(self), instrument, start_index, end_index, *args
@@ -252,7 +252,7 @@ class Feature(Expression):
 
     def _load_internal(self, instrument, start_index, end_index, freq):
         # load
-        from .data import FeatureD  # pylint: disable=C0415
+        from qlib.data.data import FeatureD
 
         return FeatureD.feature(instrument, str(self), start_index, end_index, freq)
 
@@ -268,7 +268,7 @@ class PFeature(Feature):
         return "$$" + self._name
 
     def _load_internal(self, instrument, start_index, end_index, cur_time, period=None):
-        from .data import PITD  # pylint: disable=C0415
+        from qlib.data.data import PITD
 
         return PITD.period_feature(instrument, str(self), start_index, end_index, cur_time, period)
 

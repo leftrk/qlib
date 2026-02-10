@@ -9,12 +9,12 @@ from qlib.data.dataset.utils import convert_index_format
 
 from qlib.utils import lazy_sort_index
 
-from ...utils.resam import resam_ts_data, ts_data_last
-from ...data.data import D
-from ...strategy.base import BaseStrategy
-from ...backtest.decision import BaseTradeDecision, Order, TradeDecisionWO, TradeRange
-from ...backtest.exchange import Exchange, OrderHelper
-from ...backtest.utils import CommonInfrastructure, LevelInfrastructure
+from qlib.utils.resam import resam_ts_data, ts_data_last
+from qlib.data.data import D
+from qlib.strategy.base import BaseStrategy
+from qlib.backtest.decision import BaseTradeDecision, Order, TradeDecisionWO, TradeRange
+from qlib.backtest.exchange import Exchange, OrderHelper
+from qlib.backtest.utils import CommonInfrastructure, LevelInfrastructure
 from qlib.utils.file import get_io_object
 from qlib.backtest.utils import get_start_end_idx
 

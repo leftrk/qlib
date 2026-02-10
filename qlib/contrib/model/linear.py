@@ -9,9 +9,9 @@ from qlib.data.dataset.weight import Reweighter
 from scipy.optimize import nnls
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 
-from ...model.base import Model
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
+from qlib.model.base import Model
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
 
 
 class LinearModel(Model):

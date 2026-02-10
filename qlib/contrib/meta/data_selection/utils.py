@@ -31,7 +31,7 @@ class ICLoss(nn.Module):
                 diff_point.append(i)
             prev = date
         diff_point.append(None)
-        # The lengths of diff_point will be one more larger then diff_point
+        # The lengths of diff_point will be one more larger than diff_point
 
         ic_all = 0.0
         skip_n = 0

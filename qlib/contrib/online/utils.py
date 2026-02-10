@@ -8,11 +8,11 @@ import pathlib
 import pickle
 import pandas as pd
 from ruamel.yaml import YAML
-from ...data import D
-from ...config import C
-from ...log import get_module_logger
-from ...utils import get_next_trading_date
-from ...backtest.exchange import Exchange
+from qlib.data import D
+from qlib.config import C
+from qlib.log import get_module_logger
+from qlib.utils import get_next_trading_date
+from qlib.backtest.exchange import Exchange
 
 log = get_module_logger("utils")
 

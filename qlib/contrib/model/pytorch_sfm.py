@@ -8,18 +8,18 @@ import numpy as np
 import pandas as pd
 from typing import Text, Union
 import copy
-from ...utils import get_or_create_path
-from ...log import get_module_logger
+from qlib.utils import get_or_create_path
+from qlib.log import get_module_logger
 
 import torch
 import torch.nn as nn
 import torch.nn.init as init
 import torch.optim as optim
 
-from .pytorch_utils import count_parameters
-from ...model.base import Model
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
+from qlib.contrib.model.pytorch_utils import count_parameters
+from qlib.model.base import Model
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
 
 
 class SFM_Model(nn.Module):

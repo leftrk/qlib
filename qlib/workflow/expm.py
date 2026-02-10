@@ -10,11 +10,11 @@ import os
 from typing import Optional, Text
 from pathlib import Path
 
-from .exp import MLflowExperiment, Experiment
-from ..config import C
-from .recorder import Recorder
-from ..log import get_module_logger
-from ..utils.exceptions import ExpAlreadyExistError
+from qlib.workflow.exp import MLflowExperiment, Experiment
+from qlib.config import C
+from qlib.workflow.recorder import Recorder
+from qlib.log import get_module_logger
+from qlib.utils.exceptions import ExpAlreadyExistError
 
 
 logger = get_module_logger("workflow")

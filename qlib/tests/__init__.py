@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 import io
 
-from .data import GetData
-from .. import init
-from ..constant import REG_CN, REG_TW
+from qlib.tests.data import GetData
+from qlib import init
+from qlib.constant import REG_CN, REG_TW
 from qlib.data.filter import NameDFilter
 from qlib.data import D
 from qlib.data.data import Cal, DatasetD

@@ -17,27 +17,15 @@ from typing import List, Union, Optional
 # For supporting multiprocessing in outer code, joblib is used
 from joblib import delayed
 
-from .cache import H
-from ..config import C
-from .inst_processor import InstProcessor
+from qlib.data.cache import H
+from qlib.config import C
+from qlib.data.inst_processor import InstProcessor
 
-from ..log import get_module_logger
-from .cache import DiskDatasetCache
-from ..utils import (
-    Wrapper,
-    init_instance_by_config,
-    register_wrapper,
-    get_module_by_module_path,
-    parse_field,
-    hash_args,
-    normalize_cache_fields,
-    code_to_fname,
-    time_to_slc_point,
-    read_period_data,
-    get_period_list,
-)
-from ..utils.paral import ParallelExt
-from .ops import Operators  # pylint: disable=W0611  # noqa: F401
+from qlib.log import get_module_logger
+from qlib.data.cache import DiskDatasetCache
+from qlib.utils import Wrapper, init_instance_by_config, register_wrapper, get_module_by_module_path, parse_field, \
+    hash_args, normalize_cache_fields, code_to_fname, time_to_slc_point, read_period_data, get_period_list
+from qlib.utils.paral import ParallelExt
 
 
 class ProviderBackendMixin:
@@ -244,7 +232,7 @@ class InstrumentProvider(abc.ABC):
         """
         if isinstance(market, list):
             return market
-        from .filter import SeriesDFilter  # pylint: disable=C0415
+        from qlib.data.filter import SeriesDFilter
 
         if filter_pipe is None:
             filter_pipe = []
@@ -713,7 +701,7 @@ class LocalInstrumentProvider(InstrumentProvider, ProviderBackendMixin):
         # filter
         filter_pipe = instruments["filter_pipe"]
         for filter_config in filter_pipe:
-            from . import filter as F  # pylint: disable=C0415
+            from qlib.data import filter as F
 
             filter_t = getattr(F, filter_config["filter_type"]).from_config(filter_config)
             _instruments_filtered = filter_t(_instruments_filtered, start_time, end_time, freq)
@@ -1245,7 +1233,7 @@ class ClientProvider(BaseProvider):
 
             return isinstance(instance, cls)
 
-        from .client import Client  # pylint: disable=C0415
+        from qlib.data.client import Client
 
         self.client = Client(C.flask_server, C.flask_port)
         self.logger = get_module_logger(self.__class__.__name__)

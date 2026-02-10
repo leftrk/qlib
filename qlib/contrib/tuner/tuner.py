@@ -11,13 +11,12 @@ import copy
 import logging
 import importlib
 import subprocess
-import pandas as pd
 import numpy as np
 
 from abc import abstractmethod
 
-from ...log import get_module_logger, TimeInspector
-from ...utils.pickle_utils import restricted_pickle_load
+from qlib.log import get_module_logger, TimeInspector
+from qlib.utils.pickle_utils import restricted_pickle_load
 from hyperopt import fmin, tpe
 from hyperopt import STATUS_OK, STATUS_FAIL
 

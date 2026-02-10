@@ -20,7 +20,7 @@ from qlib.rl.utils import DataQueue
 from qlib.rl.utils.finite_env import FiniteVectorEnv
 
 if TYPE_CHECKING:
-    from .trainer import Trainer
+    from qlib.rl.trainer.trainer import Trainer
 
 
 T = TypeVar("T")

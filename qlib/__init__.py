@@ -5,7 +5,7 @@ from pathlib import Path
 from setuptools_scm import get_version
 
 try:
-    from ._version import version as __version__
+    from qlib._version import version as __version__
 except ImportError:
     __version__ = get_version(root="..", relative_to=__file__)
 __version__bak = __version__  # This version is backup for QlibConfig.reset_qlib_version
@@ -18,7 +18,7 @@ from typing import Union
 
 from ruamel.yaml import YAML
 
-from .log import get_module_logger
+from qlib.log import get_module_logger
 
 
 # init qlib
@@ -39,8 +39,8 @@ def init(default_conf="client", **kwargs):
             When using the recorder, skip_if_reg can set to True to avoid loss of recorder.
 
     """
-    from .config import C  # pylint: disable=C0415
-    from .data.cache import H  # pylint: disable=C0415
+    from qlib.config import C
+    from qlib.data.cache import H
 
     logger = get_module_logger("Initialization")
 

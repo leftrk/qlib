@@ -7,11 +7,11 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 from typing import Dict, Text, Any
 
-from ...contrib.eva.alpha import calc_ic
-from ...workflow.record_temp import RecordTemp
-from ...workflow.record_temp import SignalRecord
-from ...data import dataset as qlib_dataset
-from ...log import get_module_logger
+from qlib.contrib.eva.alpha import calc_ic
+from qlib.workflow.record_temp import RecordTemp
+from qlib.workflow.record_temp import SignalRecord
+from qlib.data import dataset as qlib_dataset
+from qlib.log import get_module_logger
 
 logger = get_module_logger("workflow", logging.INFO)
 

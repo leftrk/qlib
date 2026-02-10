@@ -18,8 +18,8 @@ from qlib.rl.utils import EnvWrapper, FiniteEnvType, LogBuffer, LogCollector, Lo
 from qlib.rl.utils.finite_env import FiniteVectorEnv
 from qlib.typehint import Literal
 
-from .callbacks import Callback
-from .vessel import TrainingVesselBase
+from qlib.rl.trainer.callbacks import Callback
+from qlib.rl.trainer.vessel import TrainingVesselBase
 
 _logger = get_module_logger(__name__)
 

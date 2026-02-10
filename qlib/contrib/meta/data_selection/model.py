@@ -10,11 +10,11 @@ from tqdm.auto import tqdm
 import copy
 from typing import Union, List
 
-from ....model.meta.dataset import MetaTaskDataset
-from ....model.meta.model import MetaTaskModel
-from ....workflow import R
-from .utils import ICLoss
-from .dataset import MetaDatasetDS
+from qlib.model.meta.dataset import MetaTaskDataset
+from qlib.model.meta.model import MetaTaskModel
+from qlib.workflow import R
+from qlib.contrib.meta.data_selection.utils import ICLoss
+from qlib.contrib.meta.data_selection.dataset import MetaDatasetDS
 
 from qlib.log import get_module_logger
 from qlib.model.meta.task import MetaTask

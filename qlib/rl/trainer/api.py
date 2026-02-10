@@ -12,8 +12,8 @@ from qlib.rl.reward import Reward
 from qlib.rl.simulator import InitialStateType, Simulator
 from qlib.rl.utils import FiniteEnvType, LogWriter
 
-from .trainer import Trainer
-from .vessel import TrainingVessel
+from qlib.rl.trainer.trainer import Trainer
+from qlib.rl.trainer.vessel import TrainingVessel
 
 
 def train(

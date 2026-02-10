@@ -6,10 +6,10 @@ import numpy as np
 import pandas as pd
 import lightgbm as lgb
 
-from ...model.base import ModelFT
-from ...data.dataset import DatasetH
-from ...data.dataset.handler import DataHandlerLP
-from ...model.interpret.base import LightGBMFInt
+from qlib.model.base import ModelFT
+from qlib.data.dataset import DatasetH
+from qlib.data.dataset.handler import DataHandlerLP
+from qlib.model.interpret.base import LightGBMFInt
 
 
 class HFLGBModel(ModelFT, LightGBMFInt):

@@ -23,8 +23,8 @@ from qlib.log import get_module_logger
 from qlib.typehint import Literal
 
 if TYPE_CHECKING:
-    from .trainer import Trainer
-    from .vessel import TrainingVesselBase
+    from qlib.rl.trainer.trainer import Trainer
+    from qlib.rl.trainer.vessel import TrainingVesselBase
 
 _logger = get_module_logger(__name__)
 

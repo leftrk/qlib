@@ -2,17 +2,17 @@
 # Licensed under the MIT License.
 
 
-from pathlib import Path
 from collections.abc import Iterable
+from pathlib import Path
 
 import numpy as np
-from qlib.tests import TestAutoData
 
 from qlib.data.storage.file_storage import (
     FileCalendarStorage as CalendarStorage,
     FileInstrumentStorage as InstrumentStorage,
     FileFeatureStorage as FeatureStorage,
 )
+from qlib.tests import TestAutoData
 
 _file_name = Path(__file__).name.split(".")[0]
 DATA_DIR = Path(__file__).parent.joinpath(f"{_file_name}_data")
