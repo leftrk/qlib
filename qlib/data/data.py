@@ -382,6 +382,8 @@ class ExpressionProvider(abc.ABC):
             if field in self.expression_instance_cache:
                 expression = self.expression_instance_cache[field]
             else:
+                from qlib.data.ops import Operators
+                from qlib.data.base import Feature, PFeature
                 expression = eval(parse_field(field))
                 self.expression_instance_cache[field] = expression
         except NameError as e:
